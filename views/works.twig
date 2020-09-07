@@ -1,0 +1,107 @@
+{# index.twig #}
+{% extends "/_template/layout.twig" %}
+{% block page %}
+
+
+
+{% include '_template/_partial/top_menu_wh-bg.twig' %}
+
+<div class="works_wrapper">
+	<div class="works_fun_section">
+		<div class="woks_filter">
+			<div id="filters" class="works_menu filter_button button-group filters-button-group">
+				<div class="filter_button_item all" data-filter="*">ALL</div>
+				<div class="filter_button_item filter__project" data-filter=".filter__project">PROJECTS</div>
+				<div class="filter_button_item filter__web" data-filter=".filter__web">MOCKUPS</div>
+				<!-- <div class="filter_button_item filter__graphic" data-filter=".filter__graphic">Graphic</div> -->
+
+			</div>
+
+			<div class="works_search">
+				<input type="text" id="quicksearch" class="quicksearch" placeholder="請輸入關鍵字">
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div class="works_list_section">
+		<div class="works_list_wrapper grid" id="Container">
+			<!-- ============== [project] ============== -->
+			{% for key, value in _project %}
+				<a href="{{value[0].link}}" target="_blank" style="cursor:pointer ">
+					<div class="element_item transition filter__project " data-category="transition">
+						<div class="works_block">
+							<div class="pic">
+								<img src={{value[0].photo_index}} alt="">
+							</div>
+							<div class="works_des">
+								<h5>{{value[0].catagory}}</h5>
+								<h6>{{value[0].thistitle}}</h6>
+								<p>{{value[0].intro}}</p>
+							</div>
+
+						</div>
+					</div>
+				</a>
+			{% endfor %}
+
+			<!-- ============== [web] ============== -->
+			{% for key, value in _mockups %}
+				<a href="{{value[0].link}}">
+					<div class="element_item transition filter__web" data-category="transition">
+						<div class="works_block">
+							<div class="pic">
+								<img src={{value[0].photo_index}} alt="">
+							</div>
+							<div class="works_des">
+								<h5>{{value[0].catagory}}</h5>
+								<h6>{{value[0].thistitle}}</h6>
+								<p>{{value[0].intro}}</p>
+							</div>
+
+						</div>
+					</div>
+				</a>
+			{% endfor %}
+
+
+			
+
+			<!-- ============== [graphic] ============== -->
+			<!-- {% for key, value in _graphic %}
+				<a href="{{value[0].link}}">
+					<div class="element_item transition filter__graphic" data-category="transition">
+						<div class="works_block">
+							<div class="pic">
+								<img src={{value[0].photo_index}} alt="">
+							</div>
+							 <div class="works_des">
+								<h5>Taiwan / Taipei</h5>
+								<h6>{{value[0].thistitle}}</h6>
+								<p>{{value[0].intro}}</p>
+							</div>
+
+						</div>
+					</div>
+				</a>
+			{% endfor %} -->
+
+		
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}x
