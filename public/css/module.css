@@ -153,7 +153,9 @@ a {
   .main_wrapper {
     max-width: 720px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding: 30px;
+    padding-left: 90px; }
   .main_wrapper:after {
     content: " ";
     display: block;
@@ -178,11 +180,29 @@ a {
     margin-right: auto;
     height: 600px;
     background: url("../img/mian.jpg") center;
-    background-size: cover; }
+    background-size: cover;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .main_photo:after {
     content: " ";
     display: block;
-    clear: both; } }
+    clear: both; }
+  .main_photo .logo {
+    margin-bottom: 20px; }
+  .main_photo h2 {
+    font-size: 35px;
+    color: #222;
+    text-align: center; }
+  .main_photo h3 {
+    font-size: 21px;
+    color: #222;
+    text-align: center; } }
 
 @media (min-width: 891px) {
   .main_photo {
@@ -220,11 +240,19 @@ a {
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
-    padding: 50px; }
+    padding: 50px;
+    position: relative; }
   .index_content:after {
     content: " ";
     display: block;
     clear: both; }
+  .index_content .des {
+    width: 90%;
+    padding: 80px 40px; }
+  .index_content .rocket {
+    width: 70%;
+    left: 0;
+    bottom: 30px; }
   .index_content h6 {
     font-size: 30px;
     font-weight: 300;
@@ -234,7 +262,10 @@ a {
     font-size: 18px;
     font-weight: 300;
     color: #767676;
-    line-height: 1.8; } }
+    line-height: 1.4;
+    margin-bottom: 15px; }
+  .index_content p b {
+    color: #ddd; } }
 
 @media (min-width: 891px) {
   .index_content {
@@ -249,7 +280,8 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-align: start;
-    align-items: flex-start; }
+    align-items: flex-start;
+    position: relative; }
   .index_content:after {
     content: " ";
     display: block;
@@ -257,6 +289,11 @@ a {
   .index_content .des {
     width: 50%;
     padding: 80px 40px; }
+  .index_content .rocket {
+    width: 42%;
+    position: absolute;
+    left: 0;
+    bottom: 30px; }
   .index_content h6 {
     font-size: 30px;
     font-weight: 300;
@@ -1599,7 +1636,8 @@ a {
     font-size: 25px;
     font-weight: 400;
     margin-bottom: 10px;
-    line-height: 1.2; }
+    line-height: 1.2;
+    color: #FFF; }
   .works_list_section .works_list_wrapper .element_item .works_block .works_des p {
     font-size: 12px;
     color: #888787;
